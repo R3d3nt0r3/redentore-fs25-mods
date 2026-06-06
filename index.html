@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redentore Modding - FS25 Mods</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#a8ff00;--dark:#0a0d0a;--panel:#0f140f;--border:#2a3a2a;--text:#c8d8c0;--text-dim:#6a8a6a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--dark);color:var(--text);font-family:'Exo 2',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px);pointer-events:none;z-index:1000;}
+.hero{position:relative;padding:100px 40px 80px;text-align:center;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at 50% 0%,rgba(168,255,0,0.06) 0%,transparent 70%);overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);}
+.hero-tag{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--green);margin-bottom:24px;}
+.hero h1{font-family:'Rajdhani',sans-serif;font-size:clamp(52px,9vw,110px);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:8px;}
+.hero h1 span{color:var(--green);text-shadow:0 0 40px rgba(168,255,0,0.5);}
+.hero-sub{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);letter-spacing:0.3em;text-transform:uppercase;margin-top:20px;}
+.container{max-width:1100px;margin:0 auto;padding:0 40px;}
+section{padding:80px 0;border-bottom:1px solid var(--border);}
+.section-label{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--green);margin-bottom:16px;}
+.section-title{font-family:'Rajdhani',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:40px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr;}}
+.about-panel{background:var(--panel);border:1px solid var(--border);padding:32px;}
+.about-panel .lang{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.3em;color:var(--green);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px;}
+.about-panel .lang::after{content:'';flex:1;height:1px;background:var(--border);}
+.about-panel p{font-size:14px;line-height:1.8;color:var(--text);margin-bottom:14px;}
+.about-panel p:last-child{margin-bottom:0;}
+.mods-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2px;}
+.mod-card{background:var(--panel);border:1px solid var(--border);padding:32px;display:flex;flex-direction:column;gap:20px;transition:border-color 0.2s,background 0.2s;}
+.mod-card:hover{border-color:rgba(168,255,0,0.4);background:#111a11;}
+.mod-card-header{display:flex;align-items:center;gap:20px;}
+.mod-icon{width:72px;height:72px;border-radius:12px;border:1px solid rgba(168,255,0,0.2);object-fit:cover;flex-shrink:0;}
+.mod-name{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+.mod-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.mod-tag{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;padding:4px 10px;border:1px solid var(--border);color:var(--text-dim);text-transform:uppercase;}
+.mod-tag.green{border-color:rgba(168,255,0,0.4);color:var(--green);background:rgba(168,255,0,0.05);}
+.mod-desc{font-size:13px;line-height:1.7;color:var(--text);}
+.mod-cta{display:inline-block;margin-top:4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.25em;color:var(--green);text-transform:uppercase;text-decoration:none;}
+.mod-cta::after{content:' →';}
+footer{padding:48px 40px;text-align:center;}
+footer p{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);letter-spacing:0.2em;}
+footer p span{color:var(--green);}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero>*{animation:fadeIn 0.6s ease both;}
+.hero-tag{animation-delay:0.1s;}.hero h1{animation-delay:0.2s;}.hero-sub{animation-delay:0.3s;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="hero-tag">Farming Simulator 25</p>
+  <h1>Redentore <span>Modding</span></h1>
+  <p class="hero-sub">Script mods crafted with care &mdash; Mod fatte con cura</p>
+</header>
+<main>
+<section>
+  <div class="container">
+    <div class="section-label">About</div>
+    <div class="section-title">The Author</div>
+    <div class="about-grid">
+      <div class="about-panel">
+        <div class="lang">&#127468;&#127463; English</div>
+        <p>I'm Redentore, an old school gamer born in 1981 who discovered the joy of modding with Farming Simulator 25.</p>
+        <p>I enjoy building things and seeing them come to life &mdash; whether it's a mod, a website, or anything else. That's why I decided to create this site to collect the mods I've made.</p>
+        <p>I work in an advanced technical support helpdesk, and that shapes the way I approach modding: methodical, detail-oriented, and focused on making things that actually work well.</p>
+      </div>
+      <div class="about-panel">
+        <div class="lang">&#127470;&#127481; Italiano</div>
+        <p>Sono Redentore, un old school gamer classe 1981 che ha scoperto il mondo del modding con Farming Simulator 25.</p>
+        <p>Mi piace costruire cose e vederle realizzate &mdash; che sia una mod, un sito web, o qualsiasi altra cosa. Per questo ho deciso di creare questo mio sito in cui raccogliere le mod che ho realizzato.</p>
+        <p>Lavoro in un helpdesk tecnico avanzato, e questo influenza il mio approccio al modding: metodico, attento ai dettagli, orientato a fare cose che funzionano davvero bene.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-label">Mods</div>
+    <div class="section-title">My Mods</div>
+    <div style="margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127468;&#127463; All my mods are published on the official <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;">Giants ModHub</a></div>
+      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127470;&#127481; Tutte le mie mod sono pubblicate sul <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;">ModHub ufficiale</a> di Giants</div>
+    </div>
+    <div class="mods-grid">
+      <div class="mod-card">
+        <div class="mod-card-header">
+          <img src="img/pricealert/icon.jpg" alt="Price Alert" class="mod-icon">
+          <div>
+            <div class="mod-name">Price Alert</div>
+            <div class="mod-tags">
+              <span class="mod-tag green">v1.0.0.0</span>
+              <span class="mod-tag">Script Mod</span>
+              <span class="mod-tag">FS25</span>
+            </div>
+          </div>
+        </div>
+        <p class="mod-desc">&#127468;&#127463; A complete in-game price monitoring system. Track stock levels and selling prices for all product types, set custom alert thresholds, and never miss the right moment to sell.<br><br>&#127470;&#127481; Un sistema completo di monitoraggio prezzi in gioco. Configura soglie di alert personalizzate e non perdere mai il momento giusto per vendere.</p>
+        <a href="pricealert.html" class="mod-cta">View mod details</a>
+      </div>
+      <div class="mod-card">
+        <div class="mod-card-header">
+          <img src="img/livestockmonitor/icon.png" alt="Livestock Monitor" class="mod-icon">
+          <div>
+            <div class="mod-name">Livestock Monitor</div>
+            <div class="mod-tags">
+              <span class="mod-tag">Script Mod</span>
+              <span class="mod-tag">FS25</span>
+            </div>
+          </div>
+        </div>
+        <p class="mod-desc">&#127468;&#127463; This mod is currently in development.<br><br>&#127470;&#127481; Questa mod è attualmente in fase di sviluppo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <p>Made by <span>Redentore</span> &middot; Farming Simulator 25</p>
+</footer>
+</body>
+</html>
