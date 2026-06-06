@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Redentore FS25 Mods | Script e Utility per Farming Simulator 25</title>
 <meta name="description" content="Scarica le mod ufficiali di Redentore per Farming Simulator 25. Script QoL, Price Alert e utility esclusive per ottimizzare la tua fattoria su FS25.">
+<meta property="og:title" content="Redentore FS25 Mods | Script e Utility per Farming Simulator 25">
+<meta property="og:description" content="Scarica le mod ufficiali di Redentore per Farming Simulator 25. Script QoL, Price Alert e utility esclusive per ottimizzare la tua fattoria su FS25.">
+<meta property="og:image" content="https://r3d3nt0r3.github.io/redentore-fs25-mods/img/pricealert/icon.jpg">
+<meta property="og:url" content="https://r3d3nt0r3.github.io/redentore-fs25-mods/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{--green:#a8ff00;--dark:#0a0d0a;--panel:#0f140f;--border:#2a3a2a;--text:#c8d8c0;--text-dim:#6a8a6a;}
@@ -15,8 +22,7 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
 .hero::after{content:'';position:absolute;bottom:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);}
 .hero-tag{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--green);margin-bottom:24px;}
 .hero-title{font-family:'Rajdhani',sans-serif;font-size:clamp(52px,9vw,110px);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:8px;}
-.hero h1{font-family:'Rajdhani',sans-serif;font-size:clamp(52px,9vw,110px);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:8px;}
-.hero h1 span{color:var(--green);text-shadow:0 0 40px rgba(168,255,0,0.5);}
+.hero-title span{color:var(--green);text-shadow:0 0 40px rgba(168,255,0,0.5);}
 .hero-sub{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);letter-spacing:0.3em;text-transform:uppercase;margin-top:20px;}
 .container{max-width:1100px;margin:0 auto;padding:0 40px;}
 section{padding:80px 0;border-bottom:1px solid var(--border);}
@@ -46,13 +52,13 @@ footer p{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text
 footer p span{color:var(--green);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .hero>*{animation:fadeIn 0.6s ease both;}
-.hero-tag{animation-delay:0.1s;}.hero h1{animation-delay:0.2s;}.hero-sub{animation-delay:0.3s;}
+.hero-tag{animation-delay:0.1s;}.hero-title{animation-delay:0.2s;}.hero-sub{animation-delay:0.3s;}
 </style>
 </head>
 <body>
 <header class="hero">
   <p class="hero-tag">Farming Simulator 25</p>
-  <h1 class="hero-title">Redentore <span>Modding</span></h1>
+  <h1 class="hero-title">Redentore <span>FS25 Mods</span></h1>
   <p class="hero-sub">Script mods crafted with care &mdash; Mod fatte con cura</p>
 </header>
 <main>
@@ -61,13 +67,13 @@ footer p span{color:var(--green);}
     <div class="section-label">About</div>
     <h2 class="section-title">The Author</h2>
     <div class="about-grid">
-      <div class="about-panel">
+      <div class="about-panel" lang="en">
         <div class="lang">&#127468;&#127463; English</div>
         <p>I'm Redentore, an old school gamer born in 1981 who discovered the joy of modding with Farming Simulator 25.</p>
         <p>I enjoy building things and seeing them come to life &mdash; whether it's a mod, a website, or anything else. That's why I decided to create this site to collect the mods I've made.</p>
         <p>I work in an advanced technical support helpdesk, and that shapes the way I approach modding: methodical, detail-oriented, and focused on making things that actually work well.</p>
       </div>
-      <div class="about-panel">
+      <div class="about-panel" lang="it">
         <div class="lang">&#127470;&#127481; Italiano</div>
         <p>Sono Redentore, un old school gamer classe 1981 che ha scoperto il mondo del modding con Farming Simulator 25.</p>
         <p>Mi piace costruire cose e vederle realizzate &mdash; che sia una mod, un sito web, o qualsiasi altra cosa. Per questo ho deciso di creare questo mio sito in cui raccogliere le mod che ho realizzato.</p>
@@ -81,13 +87,13 @@ footer p span{color:var(--green);}
     <div class="section-label">Mods</div>
     <h2 class="section-title">My Mods for FS25</h2>
     <div style="margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
-      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127468;&#127463; All my mods are published on the official <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;">Giants ModHub</a></div>
-      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127470;&#127481; Tutte le mie mod sono pubblicate sul <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;">ModHub ufficiale</a> di Giants</div>
+      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127468;&#127463; All my mods are published on the official <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" title="Official Giants Software ModHub for FS25 mods" style="color:var(--green);text-decoration:none;">Giants ModHub</a></div>
+      <div style="padding:20px 28px;background:var(--panel);border:1px solid rgba(168,255,0,0.25);font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--text-dim);">&#127470;&#127481; Tutte le mie mod sono pubblicate sul <a href="https://farming-simulator.com/mods.php?title=fs2025" target="_blank" rel="noopener noreferrer" title="Profilo ModHub ufficiale Giants Software per FS25 mods" style="color:var(--green);text-decoration:none;">ModHub ufficiale</a> di Giants</div>
     </div>
     <div class="mods-grid">
       <div class="mod-card">
         <div class="mod-card-header">
-          <img src="img/pricealert/icon.jpg" alt="Price Alert mod icon - script per prezzi Farming Simulator 25" class="mod-icon">
+          <img src="img/pricealert/icon.jpg" alt="Price Alert mod icon - script per prezzi Farming Simulator 25" class="mod-icon" width="72" height="72">
           <div>
             <div class="mod-name">Price Alert</div>
             <div class="mod-tags">
@@ -102,7 +108,7 @@ footer p span{color:var(--green);}
       </div>
       <div class="mod-card">
         <div class="mod-card-header">
-          <img src="img/livestockmonitor/icon.png" alt="Livestock Monitor mod icon - script gestione animali Farming Simulator 25" class="mod-icon">
+          <img src="img/livestockmonitor/icon.png" alt="Livestock Monitor mod icon - script gestione animali Farming Simulator 25" class="mod-icon" width="72" height="72">
           <div>
             <div class="mod-name">Livestock Monitor</div>
             <div class="mod-tags">
