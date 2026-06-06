@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://r3d3nt0r3.github.io/redentore-fs25-mods/sitemap.xml
