@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://r3d3nt0r3.github.io/redentore-fs25-mods/livestockmonitor.html">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Livestock Monitor FS25 Mod","operatingSystem":"Windows, macOS","applicationCategory":"GameApplication","author":{"@type":"Person","name":"Redentore"},"url":"https://r3d3nt0r3.github.io/redentore-fs25-mods/livestockmonitor.html","downloadUrl":"https://www.farming-simulator.com/mod.php?mod_id=367447&title=fs2025"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Livestock Monitor FS25 Mod","operatingSystem":"Windows, macOS","applicationCategory":"GameApplication","author":{"@type":"Person","name":"Redentore"},"url":"https://r3d3nt0r3.github.io/redentore-fs25-mods/livestockmonitor.html","downloadUrl":"https://www.farming-simulator.com/mod.php?mod_id=367447&title=fs2025","softwareVersion":"1.1.0.0"}
 </script>
 <style>
 :root{--green:#a8ff00;--orange:#ff6600;--dark:#0a0d0a;--panel:#0f140f;--border:#2a3a2a;--text:#c8d8c0;--text-dim:#6a8a6a;}
@@ -38,6 +38,9 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
 .badge-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
 .badge{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.2em;padding:6px 14px;border:1px solid var(--border);color:var(--text-dim);text-transform:uppercase;}
 .badge.green{border-color:rgba(168,255,0,0.4);color:var(--green);background:rgba(168,255,0,0.05);}
+.badge-link{text-decoration:none;transition:all 0.2s;}
+.badge-link:hover{background:rgba(168,255,0,0.15);border-color:var(--green);box-shadow:0 0 16px rgba(168,255,0,0.3);}
+html{scroll-behavior:smooth;}
 .modhub-btn{display:inline-flex;align-items:center;gap:12px;background:var(--green);color:#000;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:18px;letter-spacing:0.15em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:all 0.2s;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
 .modhub-btn:hover{background:#fff;box-shadow:0 0 40px rgba(168,255,0,0.6);transform:translateY(-2px);}
 .container{max-width:1100px;margin:0 auto;padding:0 40px;}
@@ -85,9 +88,9 @@ footer p span{color:var(--green);}
 <header class="hero">
   <img src="img/livestockmonitor/icon.png" alt="Icona mod Livestock Monitor per Farming Simulator 25" class="hero-icon" width="120" height="120">
   <h1 class="hero-title">Livestock Monitor <span>FS25 Mod</span></h1>
-  <p class="hero-sub">Farming Simulator 25 &mdash; Script Mod &mdash; v1.0.0.0</p>
+  <p class="hero-sub">Farming Simulator 25 &mdash; Script Mod &mdash; v1.1.0.0</p>
   <div class="badge-row">
-    <span class="badge green">v1.0.0.0</span>
+    <a href="#changelog" class="badge green badge-link" title="View changelog v1.1.0.0">v1.1.0.0 &darr;</a>
     <span class="badge">Single Player</span>
     <span class="badge">7 Languages</span>
     <span class="badge">FS25</span>
@@ -103,31 +106,87 @@ footer p span{color:var(--green);}
       <div class="desc-panel" lang="en">
         <div class="lang">&#127468;&#127463; English</div>
         <p><strong style="color:#fff">Livestock Monitor &mdash; Complete Livestock Management Panel</strong></p>
-        <p>Livestock Monitor integrates directly into the Farming Simulator 25 in-game menu and gives players a comprehensive, real-time overview of all their livestock barns. Monitor health, food, water, straw, slurry, manure, and production at a glance &mdash; and act directly from the panel without ever leaving the interface.</p>
+        <p>Livestock Monitor integrates directly into the Farming Simulator 25 in-game menu and provides a comprehensive, real-time overview of all your barns: health, food, water, straw, slurry, manure, and production. Everything can be viewed and managed from the panel, without ever leaving the interface.</p>
         <ul>
-          <li><strong style="color:#fff">Full barn overview</strong> &mdash; Tab 1 shows all barns in a single table with dedicated columns for average health, food, water, straw, slurry, manure, active production, and alerts. Click any row to access rename, visit, buy, sell, and detail actions.</li>
-          <li><strong style="color:#fff">Per-species tabs</strong> &mdash; Tabs 2&ndash;6 (Cattle, Sheep, Poultry, Pigs, Horses) show individual animal clusters with breed, age, health, reproduction rate, productivity, and sale value. Animals at peak value blink green; aging animals blink red.</li>
-          <li><strong style="color:#fff">Two display modes</strong> &mdash; Choose between a draggable HUD panel, always visible on screen with live barn alerts updated every hour, or hourly alert mode, which sends a sound notification and on-screen message whenever a resource reaches a critical level &mdash; without keeping any permanent overlay on screen.</li>
+          <li><strong style="color:#fff">Full barn overview</strong> &mdash; Tab 1 shows all barns in a single table with dedicated columns for average health, food, water, straw, slurry, manure, production, and alerts. Click any row to access rename, visit, buy, sell, detail, and supply configuration actions.</li>
+          <li><strong style="color:#fff">Per-species tabs</strong> &mdash; Tabs 2&ndash;7 (Cattle, Sheep, Poultry, Pigs, Horses, Alpacas) show individual animal clusters with breed, age, health, reproduction rate, productivity, and sale value. Animals at peak value blink green; aging animals blink red. Header rows display a resource summary for each barn.</li>
+          <li><strong style="color:#fff">Automatic supply</strong> &mdash; Configure automatic resupply for each barn directly from the panel. Choose the mode (fixed schedule or free threshold), the pickup source (storages and silos, or also bales and pallets scattered across the map), and enable automatic purchasing when stocks run low. For each product, set a minimum threshold and target, with an estimated annual cost calculated in real time. Delivery cost varies based on the game&rsquo;s economic difficulty.</li>
+          <li><strong style="color:#fff">Delivery log</strong> &mdash; A dedicated tab shows the full history of all automatic deliveries, with in-game date and time, barn, product, quantity, and costs. Columns are sortable with a click on the header.</li>
+          <li><strong style="color:#fff">Two alert modes</strong> &mdash; Choose between a draggable HUD panel, always visible on screen with alerts updated every hour, or hourly alert mode, which sends a sound notification and on-screen message whenever a resource reaches a critical level &mdash; without keeping any permanent overlay on screen.</li>
           <li><strong style="color:#fff">Pre-sleep warning</strong> &mdash; Before going to sleep, the mod checks all barns and warns you if any resource will run out before you wake up, letting you decide whether to sleep or act first.</li>
           <li><strong style="color:#fff">Buy &amp; Sell dialogs</strong> &mdash; Buy animals directly from the panel with breed, age, and quantity spinners, live price breakdown and transport fee. Sell with quantity selection and net/gross price display.</li>
           <li><strong style="color:#fff">Barn Detail dialog</strong> &mdash; Full breakdown of a single barn: breeds present, production, food detail, extensions (manure heaps, silo extensions) with shared capacity and fill estimates.</li>
           <li><strong style="color:#fff">Advanced tooltips</strong> &mdash; Hover over any cell to see time-remaining estimates, rates, shared storage details, and contextual suggestions.</li>
-          <li><strong style="color:#fff">In-game settings</strong> &mdash; Display mode, HUD refresh rate, and sell-signal alerts toggle &mdash; all configurable from the standard game settings menu.</li>
+          <li><strong style="color:#fff">Beans &amp; Alpacas expansion compatibility</strong> &mdash; Full alpaca support: monitoring, buying, selling, shearing alerts, and wool growth tracking.</li>
+          <li><strong style="color:#fff">In-game settings</strong> &mdash; Display mode, HUD refresh rate, sell-signal alerts toggle, and automatic slurry/manure collection from all storages for field helpers &mdash; all configurable from the standard game settings menu.</li>
         </ul>
       </div>
       <div class="desc-panel" lang="it">
         <div class="lang">&#127470;&#127481; Italiano</div>
         <p><strong style="color:#fff">Livestock Monitor &mdash; Pannello Completo per la Gestione del Bestiame</strong></p>
-        <p>Livestock Monitor si integra direttamente nel men&ugrave; di gioco di Farming Simulator 25 e mette a disposizione del giocatore una panoramica completa e in tempo reale di tutte le stalle. Monitora salute, cibo, acqua, paglia, liquami, letame e produzione a colpo d&rsquo;occhio &mdash; e agisci direttamente dal pannello senza mai uscire dall&rsquo;interfaccia.</p>
+        <p>Livestock Monitor si integra direttamente nel men&ugrave; di gioco di Farming Simulator 25 e offre una panoramica completa e in tempo reale di tutte le stalle: salute, cibo, acqua, paglia, liquami, letame e produzione. Tutto consultabile e gestibile dal pannello, senza mai uscire dall&rsquo;interfaccia.</p>
         <ul>
-          <li><strong style="color:#fff">Panoramica di tutte le stalle</strong> &mdash; Il Tab 1 mostra tutte le stalle in una tabella con colonne dedicate a salute media, cibo, acqua, paglia, liquami, letame, produzione e avvisi. Cliccando su una riga si accede alle azioni di rinomina, visita, acquisto, vendita e dettaglio.</li>
-          <li><strong style="color:#fff">Tab per specie animale</strong> &mdash; I tab 2&ndash;6 (Bovini, Ovini, Pollame, Suini, Equini) mostrano i singoli cluster di animali con razza, et&agrave;, salute, tasso di riproduzione, produttivit&agrave; e valore di vendita. Gli animali al valore massimo lampeggiano verde; quelli in declino lampeggiano rosso.</li>
-          <li><strong style="color:#fff">Due modalit&agrave; di visualizzazione</strong> &mdash; Scegli tra il pannello HUD trascinabile, sempre visibile sullo schermo con gli avvisi aggiornati ogni ora, oppure la modalit&agrave; alert orari, che invia una notifica sonora e un messaggio a schermo ogni volta che una risorsa raggiunge una soglia critica &mdash; senza mantenere nessun overlay permanente sullo schermo.</li>
+          <li><strong style="color:#fff">Panoramica di tutte le stalle</strong> &mdash; Il Tab 1 mostra tutte le stalle in una tabella con colonne dedicate a salute media, cibo, acqua, paglia, liquami, letame, produzione e avvisi. Cliccando su una riga si accede alle azioni di rinomina, visita, acquisto, vendita, dettaglio e configurazione approvvigionamento.</li>
+          <li><strong style="color:#fff">Tab per specie animale</strong> &mdash; I tab 2&ndash;7 (Bovini, Ovini, Pollame, Suini, Equini, Alpaca) mostrano i singoli cluster di animali con razza, et&agrave;, salute, tasso di riproduzione, produttivit&agrave; e valore di vendita. Gli animali al valore massimo lampeggiano verde; quelli in declino lampeggiano rosso. Le righe header mostrano un riepilogo delle risorse di ogni stalla.</li>
+          <li><strong style="color:#fff">Approvvigionamento automatico</strong> &mdash; Configura il rifornimento automatico per ogni stalla direttamente dal pannello. Scegli la modalit&agrave; (orario fisso o soglia libera), la fonte di prelievo (depositi e silos, oppure anche balle e pallet sparsi nella mappa), e attiva l&rsquo;acquisto automatico quando le scorte non bastano. Per ogni prodotto imposta soglia minima e target, con stima del costo annuo calcolata in tempo reale. Il costo di consegna varia in base alla difficolt&agrave; economica della partita.</li>
+          <li><strong style="color:#fff">Registro consegne</strong> &mdash; Un tab dedicato mostra lo storico completo di tutte le consegne automatiche, con data e ora di gioco, stalla, prodotto, quantit&agrave; e costi. Le colonne sono ordinabili con un click sull&rsquo;intestazione.</li>
+          <li><strong style="color:#fff">Due modalit&agrave; di avviso</strong> &mdash; Scegli tra il pannello HUD trascinabile, sempre visibile sullo schermo con gli avvisi aggiornati ogni ora, oppure la modalit&agrave; alert orari, che invia una notifica sonora e un messaggio a schermo ogni volta che una risorsa raggiunge una soglia critica &mdash; senza mantenere nessun overlay permanente sullo schermo.</li>
           <li><strong style="color:#fff">Avviso pre-dormita</strong> &mdash; Prima di andare a dormire, la mod controlla tutte le stalle e avvisa se qualche risorsa si esaurir&agrave; prima del risveglio, permettendo di decidere se dormire o intervenire prima.</li>
           <li><strong style="color:#fff">Dialog acquisto e vendita</strong> &mdash; Acquista animali direttamente dal pannello con spinner per razza, et&agrave; e quantit&agrave;, riepilogo prezzi e tariffa di trasporto in tempo reale. Vendi con selezione della quantit&agrave; e visualizzazione di prezzo lordo e netto.</li>
           <li><strong style="color:#fff">Dialog dettaglio stalla</strong> &mdash; Riepilogo completo di una singola stalla: razze presenti, produzione, dettaglio cibo, estensioni collegate (concimaie, silo) con capacit&agrave; condivisa e stime di riempimento.</li>
           <li><strong style="color:#fff">Tooltip avanzati</strong> &mdash; Passando il mouse su qualsiasi cella vengono mostrate stime del tempo rimanente, tassi di consumo/produzione, dettagli sullo spazio condiviso e suggerimenti contestuali.</li>
-          <li><strong style="color:#fff">Impostazioni nel men&ugrave; di gioco</strong> &mdash; Modalit&agrave; di visualizzazione, frequenza di aggiornamento dell&rsquo;HUD e toggle per gli avvisi di vendita &mdash; tutto configurabile dal men&ugrave; impostazioni standard del gioco.</li>
+          <li><strong style="color:#fff">Compatibilit&agrave; espansione Beans &amp; Alpacas</strong> &mdash; Supporto completo per gli alpaca: monitoraggio, acquisto, vendita, avvisi tosatura e tracking crescita pelo.</li>
+          <li><strong style="color:#fff">Impostazioni nel men&ugrave; di gioco</strong> &mdash; Modalit&agrave; di visualizzazione, frequenza di aggiornamento dell&rsquo;HUD, toggle per gli avvisi di vendita e prelievo automatico liquami/letame da tutti i depositi per gli aiutanti nei campi &mdash; tutto configurabile dal men&ugrave; impostazioni standard del gioco.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="changelog">
+  <div class="container">
+    <div class="section-label">Changelog</div>
+    <h2 class="section-title">Changelog v1.1.0.0</h2>
+    <div class="desc-grid">
+      <div class="desc-panel" lang="en">
+        <div class="lang">&#127468;&#127463; English</div>
+        <p><strong style="color:#fff">New features:</strong></p>
+        <ul>
+          <li>Added automatic supply: configure automatic resupply of food, straw, and water for each barn, with pickup from stock or purchase from the shop</li>
+          <li>Added worker management for alpacas and horses: shearing, grooming, walks, and rides configurable from the supply dialog</li>
+          <li>Added Beans &amp; Alpacas expansion compatibility: full alpaca support, with wool growth tracking and time to shearing</li>
+          <li>Added resource summary row in animal cluster tabs, showing food, water, straw, and product status for each barn</li>
+          <li>Added AI helper settings for slurry and manure: collect from all farm storages</li>
+          <li>Added available funds check in the animal purchase dialog</li>
+        </ul>
+        <p><strong style="color:#fff">Fixes:</strong></p>
+        <ul>
+          <li>Fixed inaccurate food and straw countdown with incomplete diet or extensions shared between barns</li>
+        </ul>
+        <p><strong style="color:#fff">Improvements:</strong></p>
+        <ul>
+          <li>Tooltips made more readable and expanded in animal tabs</li>
+          <li>Various internal optimizations</li>
+        </ul>
+      </div>
+      <div class="desc-panel" lang="it">
+        <div class="lang">&#127470;&#127481; Italiano</div>
+        <p><strong style="color:#fff">Nuove funzionalit&agrave;:</strong></p>
+        <ul>
+          <li>Aggiunta approvvigionamenti automatici: possibilit&agrave; di configurare il rifornimento automatico di cibo, paglia e acqua per ogni stalla, con prelievo dallo stock o acquisto dal negozio</li>
+          <li>Aggiunta gestione lavoratori per alpaca e cavalli: tosatura, toelettatura, passeggiate e cavalcate configurabili dal dialog degli approvvigionamenti</li>
+          <li>Aggiunta compatibilit&agrave; con l&rsquo;espansione Beans &amp; Alpacas: supporto completo per gli alpaca, con tracking della peluria e tempo alla tosatura</li>
+          <li>Aggiunta riga di riepilogo risorse nelle schede cluster animali, con lo stato di cibo, acqua, paglia e prodotti per ogni stalla</li>
+          <li>Aggiunte impostazioni aiutante IA per liquami e letame: preleva da tutti i depositi della fattoria</li>
+          <li>Aggiunto controllo fondi disponibili nel dialogo di acquisto animali</li>
+        </ul>
+        <p><strong style="color:#fff">Correzioni:</strong></p>
+        <ul>
+          <li>Corretto il countdown di cibo e paglia impreciso con dieta incompleta o estensioni condivise tra stalle</li>
+        </ul>
+        <p><strong style="color:#fff">Miglioramenti:</strong></p>
+        <ul>
+          <li>Tooltip resi pi&ugrave; leggibili e ampliati nelle schede animali</li>
+          <li>Varie ottimizzazioni interne</li>
         </ul>
       </div>
     </div>
@@ -139,35 +198,39 @@ footer p span{color:var(--green);}
     <h2 class="section-title">Screenshot della Mod in Gioco</h2>
     <div class="screenshots-grid">
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot0.jpg')">
-        <img src="img/livestockmonitor/screenshot0.jpg" alt="Livestock Monitor FS25 - panoramica di tutte le stalle nel tab riepilogativo" loading="lazy" width="640" height="360">
+        <img src="img/livestockmonitor/screenshot0.jpg" alt="Livestock Monitor FS25 - panoramica di tutte le stalle con tab Alpacas e Log" loading="lazy" width="640" height="360">
         <div class="caption">All Barns Overview</div>
       </div>
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot1.jpg')">
-        <img src="img/livestockmonitor/screenshot1.jpg" alt="Livestock Monitor FS25 - tab per specie con cluster animali per razza, età e valore" loading="lazy" width="640" height="360">
-        <div class="caption">Per-Species Tab</div>
+        <img src="img/livestockmonitor/screenshot1.jpg" alt="Livestock Monitor FS25 - configurazione approvvigionamento automatico per stalla con soglie e costo annuo" loading="lazy" width="640" height="360">
+        <div class="caption">Automatic Supply Configuration</div>
       </div>
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot2.jpg')">
-        <img src="img/livestockmonitor/screenshot2.jpg" alt="Livestock Monitor FS25 - pannello HUD trascinabile con avvisi stalle in tempo reale" loading="lazy" width="640" height="360">
-        <div class="caption">HUD Panel &mdash; Live Alerts</div>
+        <img src="img/livestockmonitor/screenshot2.jpg" alt="Livestock Monitor FS25 - gestione lavoratori per alpaca con tosatura e passeggiate" loading="lazy" width="640" height="360">
+        <div class="caption">Workers Management</div>
       </div>
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot3.jpg')">
-        <img src="img/livestockmonitor/screenshot3.jpg" alt="Livestock Monitor FS25 - dialogo acquisto animali con selezione razza, età e quantità" loading="lazy" width="640" height="360">
-        <div class="caption">Buy &amp; Sell Animals</div>
+        <img src="img/livestockmonitor/screenshot3.jpg" alt="Livestock Monitor FS25 - registro consegne automatiche con data, stalla, prodotto e costi" loading="lazy" width="640" height="360">
+        <div class="caption">Delivery Log</div>
       </div>
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot4.jpg')">
-        <img src="img/livestockmonitor/screenshot4.jpg" alt="Livestock Monitor FS25 - dettaglio stalla con produzione, cibo ed estensioni collegate" loading="lazy" width="640" height="360">
-        <div class="caption">Barn Detail</div>
+        <img src="img/livestockmonitor/screenshot4.jpg" alt="Livestock Monitor FS25 - tab Alpacas con cluster animali, peluria, riproduzione e valore" loading="lazy" width="640" height="360">
+        <div class="caption">Alpacas Tab</div>
       </div>
       <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot5.jpg')">
-        <img src="img/livestockmonitor/screenshot5.jpg" alt="Livestock Monitor FS25 - avviso pre-dormita con riepilogo criticità stalle" loading="lazy" width="640" height="360">
-        <div class="caption">Pre-Sleep Warning</div>
+        <img src="img/livestockmonitor/screenshot5.jpg" alt="Livestock Monitor FS25 - notifica avviso orario risorse stalla durante il gioco" loading="lazy" width="640" height="360">
+        <div class="caption">Hourly Alert</div>
+      </div>
+      <div class="screenshot-item" onclick="openLightbox('img/livestockmonitor/screenshot6.jpg')">
+        <img src="img/livestockmonitor/screenshot6.jpg" alt="Livestock Monitor FS25 - pannello HUD trascinabile con avvisi stalle in tempo reale" loading="lazy" width="640" height="360">
+        <div class="caption">HUD Panel &mdash; Live Alerts</div>
       </div>
     </div>
   </div>
 </section>
 </main>
 <footer>
-  <p>Made by <span>Redentore</span> &middot; Farming Simulator 25 &middot; <span>v1.0.0.0</span></p>
+  <p>Made by <span>Redentore</span> &middot; Farming Simulator 25 &middot; <span>v1.1.0.0</span></p>
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-close" onclick="closeLightbox()">&#10005; CLOSE</div>
@@ -183,7 +246,8 @@ const screenshots = [
   'img/livestockmonitor/screenshot2.jpg',
   'img/livestockmonitor/screenshot3.jpg',
   'img/livestockmonitor/screenshot4.jpg',
-  'img/livestockmonitor/screenshot5.jpg'
+  'img/livestockmonitor/screenshot5.jpg',
+  'img/livestockmonitor/screenshot6.jpg'
 ];
 let currentIndex = 0;
 function openLightbox(src) {
